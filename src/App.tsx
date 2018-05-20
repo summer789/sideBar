@@ -1,22 +1,25 @@
 import * as React from 'react';
-import './App.css';
+import SideBar from './components/sideBar/index';
 
-import logo from './logo.svg';
+interface AppState {
+    visible: boolean;
+}
 
 class App extends React.Component {
-  public render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    state: AppState = {
+        visible: false,
+    }
+    render() {
+        const { visible } = this.state;
+        return (
+            <div className="App">
+                <button>展开</button>
+                <SideBar visible={visible}>
+                    你好啊
+        </SideBar>
+            </div>
+        );
+    }
 }
 
 export default App;
