@@ -23,7 +23,11 @@ class App extends React.Component {
         const { visible } = this.state;
         return (
             <div className="App">
-                <button onClick={this.handleShowSideBar}>展开</button>
+                <button
+                    onClick={this.handleShowSideBar}
+                >
+                    展开
+                </button>
                 <SideBar
                     visible={visible}
                     hide={this.hide}

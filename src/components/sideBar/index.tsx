@@ -13,7 +13,6 @@ class SideBar extends Component<SideBarProps> {
         e.stopPropagation();
     }
     handleHide = () => {
-        console.log('111111111')
         if (this.props.hide) {
             this.props.hide();
         }
