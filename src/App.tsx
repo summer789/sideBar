@@ -1,5 +1,6 @@
 import * as React from 'react';
 import SideBar from './components/sideBar/index';
+import Parents from './components/parents';
 
 interface AppState {
     visible: boolean;
@@ -28,6 +29,8 @@ class App extends React.Component {
                 >
                     展开
                 </button>
+                我是顶层组件
+                <Parents />
                 <SideBar
                     visible={visible}
                     hide={this.hide}
